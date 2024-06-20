@@ -1,0 +1,16 @@
+Es posible redirigir a una ruta diferente después de procesar el formulario. 
+En PHP, esto se hace utilizando la función header** para enviar un encabezado HTTP Location al cliente, 
+indicando la nueva URL a la que debe redirigir.
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST['name']);
+    //....
+
+    // Después de procesar los datos, redirigir a otra página
+    header("Location: gracias.php");  <--------**
+    exit(); // Importante para asegurarse de que el script se detenga aquí
+
+} else {
+    echo "Acceso no permitido.";
+}

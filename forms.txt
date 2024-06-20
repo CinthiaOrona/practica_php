@@ -1,0 +1,6 @@
+    ESTE METODO EN EL FORM, PERMITE UN ENVIO SEGURO SIN XSS.
+
+
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    </form>
+

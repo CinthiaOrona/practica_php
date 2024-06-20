@@ -1,0 +1,9 @@
+CUANDO IMPORTAMOS UN COMPONENTE O ARCHIVOS CON FUNCIONES Y/O VARIABLES CONSTANTES.
+
+La diferencia entre include y require es que require generará un error fatal si el archivo no puede ser incluido, 
+mientras que include solo generará una advertencia (warning) y continuará ejecutando el script.
+
+<?php require 'componentes/user_form.php'; ?>
+
+<?php include 'componentes/user_form.php'; ?>
+

@@ -23,3 +23,21 @@ if ($db != null) {
     }
 }
 ?>
+
+FORMA COMUN
+
+ 
+MANERA BASICA DE MOSTRAR DATOS COMO TEXTO PLANO
+ echo "<p>El nombre es: $_POST[name] </p><br>";
+ echo "El apellido es: $_POST[surname] <br>";
+ echo "El email es: $_POST[email] <br>";
+ echo "La contraseña es: $_POST[password] <br>";
+ echo "La fecha es: $_POST[date] <br>";
+ echo "El pais es: $_POST[country] <br>";
+-->
+
+ 
+MANERA DE MOSTRAR DATOS EN UN ARRAY
+    ?? Esto muestra los datos en un array
+    print_r($_POST);
+ 
