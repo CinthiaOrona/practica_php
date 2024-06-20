@@ -1,0 +1,25 @@
+
+PARA MOSTRAR LOS DATOS DE LA BASE DE DATOS EN UNA PÁGINA WEB
+
+- EN EL HTML SOBRE LA SINTAXIS DE PHP
+
+<?php
+include_once('conexion.php');
+$conexion = new Cconexion();
+$db = $conexion->ConexionBD();
+
+if ($db != null) {
+    $query = $db->query("SELECT * FROM user");
+    $usuarios = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($usuarios) {
+        echo "<ul>";
+        foreach ($usuarios as $usuario) {
+            echo "<li>" . $usuario['name'] . " - " . $usuario['surname'] . " - " . $usuario['email'] . " - " . $usuario['password'] . " - " . $usuario['country'] . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "No hay usuarios registrados.";
+    }
+}
+?>
